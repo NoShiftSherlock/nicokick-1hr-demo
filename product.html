@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>on! Wintergreen Nicotine Pouches | Nicokick</title>
+<meta name="description" content="Nicokick nicotine pouches, now with one-hour delivery in New York via Gopuff and DoorDash." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="assets/logo.png" />
+</head>
+<body>
+
+<div class="announce">WARNING: This product contains nicotine. Nicotine is an addictive chemical. &nbsp;<span class="bolt">⚡</span> <b>Now delivering in about 1 hour in New York</b> via Gopuff + DoorDash. <a href="#onehr">Check your address →</a></div>
+
+<header class="header light">
+  <nav class="nav">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="Nicokick" /></a>
+    <div class="nav-links">
+      <a href="index.html#shop">Nicotine Pouches</a>
+      <a href="index.html#shop">October Highlights!</a>
+      <a href="index.html#shop">Bestsellers</a>
+      <a href="index.html#shop">New Arrivals</a>
+      <a href="index.html#shop">Discounted Products</a>
+      <a href="#">Nicokick Rewards</a>
+      <a href="nicokick-now.html" class="now">⚡ Nicokick Now</a>
+    </div>
+    <div class="nav-right">
+      <a class="hide-sm" href="#">Refer a Friend</a>
+      <button class="hamburger" onclick="openMenu()" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      <a href="checkout.html" class="cart-pill" onclick="event.preventDefault();openCart()">Cart <span class="cart-count" id="cartCount">3</span></a>
+    </div>
+  </nav>
+</header>
+<div class="nav-sub"><div class="wrap"><span>Express Shipping · Best Prices &amp; Assortment</span><span class="ship">Ship to: 11226 · <b>1-hour delivery available</b></span></div></div>
+
+<div class="wrap">
+  <div class="pdp">
+    <div class="pdp-media">
+      <div class="main">
+        <div class="line-flag"><span class="tag line gold"><span class="dot"></span></span> on!</div>
+        <img src="assets/on-wg.png" alt="on! Wintergreen nicotine pouches" />
+      </div>
+      <div class="thumbs">
+        <div><img src="assets/on-wg.png" alt="" /></div>
+        <div><img src="assets/on-mint.png" alt="" /></div>
+        <div><img src="assets/zyn-wg.png" alt="" /></div>
+      </div>
+    </div>
+
+    <div class="pdp-info">
+      <div class="eyebrow" style="margin-bottom:10px">on! · Best seller · 2 / 4 / 8 MG</div>
+      <h1 class="serif">on! Wintergreen Nicotine Pouches 8MG</h1>
+      <p class="desc">Tobacco-free nicotine pouches with a cool wintergreen flavor. Sold per can, 20 pouches. Ships from Nicokick, or arrives in about an hour with 1-hour delivery. You must be 21+.</p>
+
+      <div class="price-line">
+        <span class="p">$3.89</span>
+        <span class="sep">|</span>
+        <span class="muted">per can + tax</span>
+        <span class="sep">|</span>
+        <span class="muted">5-pack $19.45</span>
+      </div>
+
+      <div class="buy-modes" id="buyModes">
+        <button class="buy-mode" data-mode="subscribe" onclick="setMode('subscribe')">Subscribe &amp; Save 10%<small>$17.50 · every 4 wks</small></button>
+        <button class="buy-mode active" data-mode="once" onclick="setMode('once')">Buy Once<small>$19.45 · ships 2-5 days</small></button>
+        <button class="buy-mode onehr" data-mode="onehr" onclick="setMode('onehr')"><span class="bolt">⚡</span> 1-Hour Delivery<small>from $4.49 · about 1 hr</small></button>
+      </div>
+
+      <div class="benefits" id="stdBenefits">
+        <div><span class="tick">✓</span> Modify &amp; cancel anytime</div>
+        <div><span class="tick">✓</span> Earn Nicokick Rewards</div>
+        <div><span class="tick">✓</span> Adult signature on delivery</div>
+        <div><span class="tick">✓</span> Ships from Texas by FedEx / UPS / USPS</div>
+      </div>
+
+      <div class="onehr-module" id="onehrModule" style="display:none">
+        <div class="top">
+          <div class="t"><span class="bolt">⚡</span> Need it today? Get it in about an hour.</div>
+          <div class="retailer-chips">
+            <span class="chip"><img class="logo" src="assets/gopuff-icon.png" alt="Gopuff" /> Gopuff</span>
+            <span class="chip"><img class="logo" src="assets/doordash-icon.svg" alt="DoorDash" /> DoorDash</span>
+          </div>
+        </div>
+        <div class="sub">Delivered from a local licensed retailer on Gopuff or DoorDash. Single cans and small packs, delivery only. 21+ ID is checked at the door.</div>
+        <div class="addr-field">
+          <span aria-hidden="true">📍</span>
+          <input id="pdpAddr" type="text" placeholder="123 Main St, New York, NY" />
+          <button class="btn btn-dark" onclick="pdpCheck()">Check</button>
+        </div>
+        <div id="pdpAvail" style="display:none">
+          <div class="avail-head" style="margin-top:18px"><span>✓</span> In stock near you · delivered in ~52 min</div>
+          <div class="mini-prod"><img src="assets/on-wg.png" alt=""/><div class="info"><div class="name">Single can, 8MG</div><div class="meta">1 can · $4.49</div></div><button class="mini-add" onclick="addToCart()">Add</button></div>
+          <div class="mini-prod"><img src="assets/on-wg.png" alt=""/><div class="info"><div class="name">5-can pack, 8MG</div><div class="meta">5 cans · $19.45</div></div><button class="mini-add" onclick="addToCart()">Add</button></div>
+          <a href="checkout.html" class="btn btn-white btn-block" style="margin-top:14px">Check out · 1-hour delivery →</a>
+        </div>
+        <div class="pill-note">Order &amp; customer data stay in Nicokick's Magento order management, routed to the nearest stocked store automatically.</div>
+      </div>
+
+      <div class="qty-row" id="stdBuyRow">
+        <div class="qty"><button onclick="qty(-1)">−</button><span id="qtyVal">1</span><button onclick="qty(1)">+</button></div>
+        <button class="btn btn-dark add-cta btn-lg" id="addBtn" onclick="addToCart()">Add to cart — $19.45</button>
+      </div>
+
+      <div class="guarantee"><b>21+ only.</b> WARNING: This product contains nicotine. Nicotine is an addictive chemical. Not for sale to minors.</div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="top">
+      <div class="updates">
+        <h3 class="serif">Join our Newsletter &amp; save 30% on your first order!</h3>
+        <div class="subscribe"><input placeholder="Enter your email" /><button>›</button></div>
+        <p style="font-size:12px;opacity:.7;margin-top:14px;max-width:340px">You must be 21 or older to purchase. By signing up you agree to receive marketing emails and can unsubscribe at any time.</p>
+      </div>
+      <div><div class="colhead">Customer Support</div><ul><li><a href="#">Track your order</a></li><li><a href="#">Help Center</a></li><li><a href="#">Shipping &amp; Returns</a></li><li><a href="#">Contact us</a></li></ul></div>
+      <div><div class="colhead">Resources</div><ul><li><a href="#">Nicokick Rewards</a></li><li><a href="#">Refer a Friend</a></li><li><a href="#">Blog</a></li><li><a href="#">Brands</a></li></ul></div>
+      <div><div class="colhead">About Us</div><ul><li><a href="#">Our story</a></li><li><a href="#">Careers</a></li><li><a href="#">Terms &amp; Privacy</a></li></ul></div>
+      <div><div class="colhead">Nicokick Now</div><ul><li><a href="nicokick-now.html">Check availability</a></li><li><a href="index.html#onehour">How it works</a></li><li><a href="#">Delivery zones</a></li></ul></div>
+    </div>
+    <div class="base"><span>© 2026 Nicokick · 21+ only · ID required</span><span>One-hour delivery powered by Vesper Commerce · Gopuff + DoorDash</span></div>
+  </div>
+</footer>
+
+<div class="demo-ribbon"><span class="bolt">⚡</span> Vesper Commerce demo · 1-hour delivery concept</div>
+
+<script src="app.js"></script>
+</body>
+</html>

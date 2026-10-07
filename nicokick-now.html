@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nicokick Now | Nicotine pouches delivered in about an hour</title>
+<meta name="description" content="Nicokick Now: nicotine pouches delivered in about an hour from a local licensed retailer via Gopuff and DoorDash. 21+ ID checked at the door." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="assets/logo.png" />
+</head>
+<body>
+
+<div class="announce">WARNING: This product contains nicotine. Nicotine is an addictive chemical. &nbsp;<span class="bolt">⚡</span> <b>Now delivering in about 1 hour in New York</b> via Gopuff + DoorDash. <a href="#now">Check your address →</a></div>
+
+<header class="header light">
+  <nav class="nav">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="Nicokick" /></a>
+    <div class="nav-links">
+      <a href="index.html#shop">Nicotine Pouches</a>
+      <a href="index.html#shop">October Highlights!</a>
+      <a href="index.html#shop">Bestsellers</a>
+      <a href="index.html#shop">New Arrivals</a>
+      <a href="index.html#shop">Discounted Products</a>
+      <a href="#">Nicokick Rewards</a>
+      <a href="nicokick-now.html" class="now">⚡ Nicokick Now</a>
+    </div>
+    <div class="nav-right">
+      <a class="hide-sm" href="#">Refer a Friend</a>
+      <button class="hamburger" onclick="openMenu()" aria-label="Open menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+      <a href="checkout.html" class="cart-pill" onclick="event.preventDefault();openCart()">Cart <span class="cart-count" id="cartCount">3</span></a>
+    </div>
+  </nav>
+</header>
+<div class="nav-sub"><div class="wrap"><span>Express Shipping · Best Prices &amp; Assortment</span><span class="ship">Ship to: 11226 · <b>1-hour delivery available</b></span></div></div>
+
+<section class="now-hero" id="now">
+  <div class="wrap grid">
+    <div>
+      <div class="kick">⚡ On-demand</div>
+      <div class="eyebrow">Nicokick Now</div>
+      <h1 class="serif">Pouches at your door in about an hour.</h1>
+      <div class="facts">
+        <div><span class="k">Speed</span> About 60 minutes, not 2-5 days by parcel</div>
+        <div><span class="k">From</span> A local licensed retailer near you</div>
+        <div><span class="k">Age check</span> 21+ ID verified at the door, no signature wait</div>
+        <div><span class="k">Hours</span> Available 8:00 AM to 11:00 PM daily</div>
+        <div><span class="k">Coverage</span> New York metro · more cities soon</div>
+      </div>
+      <div class="chips-row retailer-chips">
+        <span class="chip"><img class="logo" src="assets/gopuff-icon.png" alt="Gopuff" /> Gopuff</span>
+        <span class="chip"><img class="logo" src="assets/doordash-icon.svg" alt="DoorDash" /> DoorDash</span>
+        <span class="delivery-badge"><span class="bolt">⚡</span> About 1 hr</span>
+      </div>
+    </div>
+    <div class="now-visual">
+      <div class="float-badge"><span class="bolt">⚡</span> ~52 min near you</div>
+      <img src="assets/zyn-wg.png" alt="ZYN Wintergreen available on demand" />
+    </div>
+  </div>
+</section>
+
+<div class="now-addrbar">
+  <div class="wrap inner">
+    <span class="lbl">Deliver to</span>
+    <div class="field">
+      <span aria-hidden="true">📍</span>
+      <input id="nowAddr" type="text" placeholder="Enter your address, e.g. 604 Broadway, New York, NY" />
+      <button class="btn btn-dark" onclick="nowCheck()">Check availability</button>
+    </div>
+    <span class="now-addr-state" id="nowAddrState"><span>✓</span> In your zone · delivered in ~52 min</span>
+  </div>
+</div>
+
+<section class="now-section">
+  <div class="wrap">
+    <div class="now-gridwrap show" id="nowGridWrap">
+      <div class="now-grid" id="nowGrid"></div>
+      <div class="now-disclaimer">
+        Products and pricing shown reflect live Gopuff / DoorDash inventory near you. Single cans and small packs for delivery only. You must be 21+ and show valid ID at the door. Your order still lands in Nicokick's order management like any other.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how" style="padding:70px 0">
+  <div class="wrap">
+    <div class="eyebrow">Why Nicokick Now</div>
+    <h2 class="serif" style="font-size:clamp(26px,3.2vw,40px);margin-top:12px;max-width:680px">Delivered by a local licensed retailer, not an adult-signature parcel from Texas.</h2>
+    <div class="steps now-steps-3">
+      <div class="step"><div class="icon">⚡</div><h3>Need-it-now, captured</h3><p>Keep the "I'm out of cans" sale on Nicokick instead of losing it to the corner store.</p></div>
+      <div class="step"><div class="icon">🪪</div><h3>Age-gated at the door</h3><p>Couriers verify 21+ ID on delivery. No waiting around for a FedEx adult signature.</p></div>
+      <div class="step"><div class="icon">📦</div><h3>No new ops</h3><p>Gopuff + DoorDash act as the delivery 3PL. No warehouse changes, no new fleet.</p></div>
+    </div>
+    <div class="assurance">
+      <span><span class="tick">✓</span> Order &amp; customer record stay with Nicokick</span>
+      <span><span class="tick">✓</span> Same Magento checkout &amp; account</span>
+      <span><span class="tick">✓</span> Go live in 2-3 weeks</span>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="top">
+      <div class="updates">
+        <h3 class="serif">Join our Newsletter &amp; save 30% on your first order!</h3>
+        <div class="subscribe"><input placeholder="Enter your email" /><button>›</button></div>
+        <p style="font-size:12px;opacity:.7;margin-top:14px;max-width:340px">You must be 21 or older to purchase. By signing up you agree to receive marketing emails and can unsubscribe at any time.</p>
+      </div>
+      <div><div class="colhead">Customer Support</div><ul><li><a href="#">Track your order</a></li><li><a href="#">Help Center</a></li><li><a href="#">Shipping &amp; Returns</a></li><li><a href="#">Contact us</a></li></ul></div>
+      <div><div class="colhead">Resources</div><ul><li><a href="#">Nicokick Rewards</a></li><li><a href="#">Refer a Friend</a></li><li><a href="#">Blog</a></li><li><a href="#">Brands</a></li></ul></div>
+      <div><div class="colhead">About Us</div><ul><li><a href="#">Our story</a></li><li><a href="#">Careers</a></li><li><a href="#">Terms &amp; Privacy</a></li></ul></div>
+      <div><div class="colhead">Nicokick Now</div><ul><li><a href="nicokick-now.html">Check availability</a></li><li><a href="index.html#onehour">How it works</a></li><li><a href="#">Delivery zones</a></li></ul></div>
+    </div>
+    <div class="base"><span>© 2026 Nicokick · 21+ only · ID required</span><span>One-hour delivery powered by Vesper Commerce · Gopuff + DoorDash</span></div>
+  </div>
+</footer>
+
+<div class="demo-ribbon"><span class="bolt">⚡</span> Vesper Commerce demo · 1-hour delivery concept</div>
+
+<script src="app.js"></script>
+</body>
+</html>
